@@ -41,7 +41,7 @@ function getDescribe(path, j) {
       j.Identifier.check(path.value.callee) &&
       path.value.callee?.name === "describe"
     ) {
-      describe += path.value.arguments[0].value;
+      describe = path.value.arguments[0].value + describe;
     }
 
     path = path.parentPath;
